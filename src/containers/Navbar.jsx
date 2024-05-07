@@ -49,9 +49,9 @@ const Navbar = () => {
         </button>
         <div className={`${toggle?'flex': 'hidden'} flex-col items-start absolute  top-14 rounded-lg p-4 bg-cyan-gradient space-y-2 sidebar`}>
           {navLinks.map((item, index)=>(
-            <a href={`#${item.id}`} className="px-4 text-nowrap text-lg text-white font-semibold">
+            <Link to={`${item.id}`} spy={true} smooth={true} offset={-100} duration={100} className="px-4 text-nowrap text-lg text-white font-semibold">
               {item.title}
-            </a>
+            </Link>
           ))}
           <p className="px-4 text-nowrap text-lg text-white font-semibold max-xs:flex hidden">Sign In</p>
           <button className="px-6 py-2 rounded-md text-black font-bold font-manrope bg-pink-gradient min-w-[140px] w-full max-xs:flex hidden">
